@@ -1,0 +1,51 @@
+# Knowledge Graph Engine - Default Configuration
+
+store:
+  # Triple store settings
+  backend: memory  # Only in-memory backend supported
+
+query:
+  # Query engine settings
+  max_results: 1000
+  timeout_seconds: 30
+  path_max_depth: 10
+
+embeddings:
+  # TransE settings
+  transe:
+    embedding_dim: 128
+    margin: 1.0
+    norm: 2  # L1 or L2
+    learning_rate: 0.01
+
+  # RotatE settings
+  rotate:
+    embedding_dim: 128
+    margin: 6.0
+    learning_rate: 0.001
+    adversarial_temperature: 1.0
+
+  # Training settings
+  training:
+    epochs: 100
+    batch_size: 256
+    neg_samples: 1
+    seed: 42
+
+resolution:
+  # Entity resolution settings
+  blocking:
+    method: lsh  # lsh or sorted
+    lsh_hashes: 100
+    lsh_bands: 10
+    window_size: 5
+
+  matching:
+    threshold: 0.7
+    fields:
+      - name: name
+        weight: 0.6
+        similarity: levenshtein
+      - name: city
+        weight: 0.4
+        similarity: jaccard

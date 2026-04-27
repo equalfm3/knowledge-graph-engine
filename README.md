@@ -236,7 +236,6 @@ knowledge-graph-engine/
 ├── configs/
 ├── data/
 │   └── sample_graph/
-├── notebooks/
 ├── requirements.txt
 ├── .gitignore
 └── README.md

@@ -1,0 +1,9 @@
+record_id,name,city,field
+r1,Albert Einstein,Ulm,Physics
+r2,A. Einstein,Ulm Germany,Physics
+r3,Marie Curie,Warsaw,Chemistry
+r4,M. Curie,Warsaw Poland,Chemistry
+r5,Isaac Newton,Woolsthorpe,Physics
+r6,I. Newton,Woolsthorpe England,Physics
+r7,Niels Bohr,Copenhagen,Physics
+r8,N. Bohr,Copenhagen Denmark,Physics
